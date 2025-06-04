@@ -32,3 +32,7 @@ def predict_rings(features: AbaloneFeatures):
         "predicted_rings": round(predicted_rings, 2),
         "estimated_age_years": round(estimated_age, 2)
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
